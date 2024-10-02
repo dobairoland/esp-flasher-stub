@@ -22,6 +22,7 @@ enum Chip {
     Esp32h2,
     Esp32s2,
     Esp32s3,
+    Esp32p4,
 }
 
 impl Chip {
@@ -39,6 +40,7 @@ impl Chip {
             Chip::Esp32c6 | Chip::Esp32h2 => "riscv32imac-unknown-none-elf",
             Chip::Esp32s2 => "xtensa-esp32s2-none-elf",
             Chip::Esp32s3 => "xtensa-esp32s3-none-elf",
+            Chip::Esp32p4 => "riscv32imac-unknown-none-elf",
         }
     }
 }

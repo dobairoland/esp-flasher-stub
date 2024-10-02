@@ -6,7 +6,7 @@
 
 Rust implementation of the [esptool flasher stub](https://github.com/espressif/esptool-legacy-flasher-stub/).
 
-Supports the ESP32, ESP32-C2/C3/C6, ESP32-H2, and ESP32-S2/S3. Currently, `UART` and `USB Serial JTAG` are the supported transport modes, and support for other modes is planned.
+Supports the ESP32, ESP32-C2/C3/C6, ESP32-H2, ESP32-S2/S3, and ESP32-P4. Currently, `UART` and `USB Serial JTAG` are the supported transport modes, and support for other modes is planned.
 
 ## Quickstart
 
@@ -41,6 +41,10 @@ cargo +esp build --release --features=esp32s2 --target=xtensa-esp32s2-none-elf
 
 # ESP32-S3
 cargo +esp build --release --features=esp32s3 --target=xtensa-esp32s3-none-elf
+
+# ESP32-P4
+cargo +nightly build --release --features=esp32p4 --target=riscv32imac-unknown-none-elf
+
 ```
 
 In order to generate the JSON and TOML stub files for one or more devices, you can again use the `xtask` package:

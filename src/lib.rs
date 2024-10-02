@@ -15,6 +15,8 @@ pub use targets::Esp32h2 as Target;
 pub use targets::Esp32s2 as Target;
 #[cfg(feature = "esp32s3")]
 pub use targets::Esp32s3 as Target;
+#[cfg(feature = "esp32p4")]
+pub use targets::Esp32p4 as Target;
 
 pub mod commands;
 pub mod dprint;
@@ -23,6 +25,12 @@ pub mod miniz_types;
 pub mod protocol;
 pub mod targets;
 
+#[cfg(feature = "esp32p4")]
+pub mod hal_less {
+    pub mod esp32p4;
+}
+
+#[cfg(not(feature = "esp32p4"))]
 pub use esp_hal as hal;
 
 use self::{

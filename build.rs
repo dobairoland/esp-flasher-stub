@@ -18,6 +18,8 @@ fn main() -> Result<(), Box<dyn Error>> {
         "esp32s2"
     } else if cfg!(feature = "esp32s3") {
         "esp32s3"
+    } else if cfg!(feature = "esp32p4") {
+        "esp32p4"
     } else {
         panic!("Must select exactly one chip feature!")
     };
@@ -38,6 +40,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         || cfg!(feature = "esp32c6")
         || cfg!(feature = "esp32h2")
         || cfg!(feature = "esp32s3")
+        || cfg!(feature = "esp32p4")
     {
         println!("cargo:rustc-cfg=usb_device");
     }

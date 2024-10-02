@@ -368,6 +368,9 @@ pub struct Esp32s2;
 #[derive(Default)]
 pub struct Esp32s3;
 
+#[derive(Default)]
+pub struct Esp32p4;
+
 impl EspCommon for Esp32 {
     const SPI_BASE_REG: u32 = 0x3ff42000;
     const SPI_RD_STATUS_REG: u32 = Self::SPI_BASE_REG + 0x10;
@@ -467,6 +470,9 @@ impl EspUsbSerialJtagId for Esp32c6 {}
 impl EspUsbSerialJtagId for Esp32h2 {}
 impl EspUsbSerialJtagId for Esp32s3 {
     const USB_SERIAL_JTAG_ID: u8 = 4;
+}
+impl EspUsbSerialJtagId for Esp32p4 {
+    const USB_SERIAL_JTAG_ID: u8 = 0;
 }
 
 pub trait EspUsbOtgId {

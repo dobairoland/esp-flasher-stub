@@ -35,6 +35,7 @@ jobs:
             { chip: "esp32c3", target: "riscv32imc-unknown-none-elf" },
             { chip: "esp32c6", target: "riscv32imac-unknown-none-elf" },
             { chip: "esp32h2", target: "riscv32imac-unknown-none-elf" },
+            { chip: "esp32p4", target: "riscv32imac-unknown-none-elf" },
           ]
 
     steps:
@@ -86,6 +87,7 @@ jobs:
             { chip: "esp32c3", target: "riscv32imc-unknown-none-elf" },
             { chip: "esp32c6", target: "riscv32imac-unknown-none-elf" },
             { chip: "esp32h2", target: "riscv32imac-unknown-none-elf" },
+            { chip: "esp32p4", target: "riscv32imac-unknown-none-elf" },
           ]
 
     steps:
@@ -151,6 +153,7 @@ jobs:
             { chip: "esp32c3", target: "riscv32imc-unknown-none-elf" },
             { chip: "esp32c6", target: "riscv32imac-unknown-none-elf" },
             { chip: "esp32h2", target: "riscv32imac-unknown-none-elf" },
+            { chip: "esp32p4", target: "riscv32imac-unknown-none-elf" },
           ]
 
     steps:
